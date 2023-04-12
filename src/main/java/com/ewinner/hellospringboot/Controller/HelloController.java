@@ -45,6 +45,5 @@ public class HelloController {
         for (String s: address) {
             System.out.println(s);
         }
-        System.out.println(server);
     }
 }

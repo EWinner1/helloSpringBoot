@@ -1,0 +1,15 @@
+server:
+  port: 12322
+  address:
+    - 127.0.0.1
+    - localhost
+  open-ports:
+    - 8080
+    - 8081
+  serverName: "Develop"
+  dockerConfigs:
+    - name: ${server.serverName}-docker1
+      ip-address: 192.168.31.101
+    - name: ${server.serverName}-docker2
+      ip-address: 192.168.31.102
+    - {name: docker3, ipAddress: 192.168.31.103}
