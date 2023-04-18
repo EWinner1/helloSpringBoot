@@ -20,6 +20,6 @@ server:
       ip-address: 192.168.31.101
     - name: ${server.serverName}-docker2
       ip-address: 192.168.31.102
-    - {name: docker3, ipAddress: 192.168.31.103}
+    - { name: docker3, ipAddress: 192.168.31.103 }
 #   此处也可以配置为这种one-line形式，但是在实际测试中发现$符号无法被识别，报错
 #   - {name: ${server.serverName}-docker3, ipAddress: 192.168.31.103}

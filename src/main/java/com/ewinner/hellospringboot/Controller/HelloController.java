@@ -14,22 +14,24 @@ public class HelloController {
     private String serverName;
     private Environment env;
     private Server server;
+
     @Autowired
-    public void setEnvironment (Environment env) {
+    public void setEnvironment(Environment env) {
         this.env = env;
     }
+
     @Autowired
-    public void setServer (Server server) {
+    public void setServer(Server server) {
         this.server = server;
     }
 
     @RequestMapping("/helloController")
-    public String hello(){
+    public String hello() {
         return "Hello SpringBoot!";
     }
 
     @RequestMapping("/serverStatus")
-    public void getStatus(){
+    public void getStatus() {
         System.out.print("Server name is ");
         System.out.println(serverName);
         System.out.println("-----------------------");
@@ -42,7 +44,7 @@ public class HelloController {
         System.out.println("Available ports:");
         System.out.println(server.getOpenPorts().toString().replaceAll("(?<=}),", "\n"));
         String[] address = server.getAddress();
-        for (String s: address) {
+        for (String s : address) {
             System.out.println(s);
         }
     }

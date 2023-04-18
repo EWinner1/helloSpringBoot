@@ -22,7 +22,7 @@ public class DockerInfo {
 
     @Override
     public String toString() {
-        return  "DockerInfo{" +
+        return "DockerInfo{" +
                 "name='" + name + '\'' +
                 ", ipAddress='" + ipAddress + '\'' +
                 '}';

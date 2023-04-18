@@ -17,7 +17,7 @@ public class UserServiceTest {
     private UserService userService;
 
     @Test
-    public void TestCreateUser(){
+    public void TestCreateUser() {
         this.userService.CreateUser();
     }
 }

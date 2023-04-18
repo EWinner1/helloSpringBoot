@@ -7,6 +7,14 @@ spring:
       port: 6379
       ssl: false
       database: 0
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    type: com.microsoft.sqlserver.jdbc.SQLServerDataSource
+    url: jdbc:sqlserver://localhost:1433;integratedSecurity=true;trustServerCertificate=true;encrypt=true;Database=MyTestData
 server:
   servlet:
     context-path: /route
+mybatis:
+  mapper-locations: classpath:Mappers/*Mapper.xml
+  type-aliases-package: com.ewinner.hellospringboot.Common.Models
+#  config-location: 指定MyBatis的核心配置文件
