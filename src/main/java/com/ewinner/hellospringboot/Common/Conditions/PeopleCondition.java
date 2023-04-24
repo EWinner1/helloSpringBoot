@@ -26,7 +26,7 @@ public class PeopleCondition implements Condition {
         }
         return true;*/
         Map<String, Object> map = metadata.getAnnotationAttributes(PeopleConditionAnnotations.class.getName());
-        String[] conditions = (String[]) map.get("value");
+        String[] conditions = (String[]) map.get("conditions");
         try {
             for (String className : conditions) {
                 Class<?> cls = Class.forName(className);

@@ -2,6 +2,7 @@ package com.ewinner.hellospringboot.Common.Configs;
 
 import com.ewinner.hellospringboot.Common.Annotations.PeopleConditionAnnotations;
 import com.ewinner.hellospringboot.Common.Models.People;
+import com.ewinner.hellospringboot.Common.Models.UserRole;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -12,7 +13,12 @@ public class PeopleConfig {
     @PeopleConditionAnnotations(conditions = {"org.springframework.data.redis.core.RedisTemplate"})
     //定义的静态注解
     //@Conditional(PeopleCondition.class)
-    public People people(){
+    public People people() {
         return new People();
+    }
+
+    @Bean
+    public UserRole userRole() {
+        return new UserRole();
     }
 }
