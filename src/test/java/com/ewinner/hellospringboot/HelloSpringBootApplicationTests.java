@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import java.util.concurrent.TimeUnit;
+
 @SpringBootTest
 class HelloSpringBootApplicationTests {
 
@@ -24,6 +26,7 @@ class HelloSpringBootApplicationTests {
     @Test
     public void TestSetRedisCache() {
         redisTemplate.boundValueOps("name").set("Justin William");
+        redisTemplate.expire("name", 11, TimeUnit.SECONDS);
     }
 
     @Test
