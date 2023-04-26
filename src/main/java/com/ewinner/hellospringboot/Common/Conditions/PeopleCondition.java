@@ -9,11 +9,10 @@ import java.util.Map;
 
 public class PeopleCondition implements Condition {
     /**
-     *
-     * @param context the condition context 获取上下文对象，环境，IOC等
+     * @param context  the condition context 获取上下文对象，环境，IOC等
      * @param metadata the metadata of the {@link org.springframework.core.type.AnnotationMetadata class}
-     * or {@link org.springframework.core.type.MethodMetadata method} being checked
-     * @return
+     *                 or {@link org.springframework.core.type.MethodMetadata method} being checked
+     * @return is exist or not class
      */
     @Override
     public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
