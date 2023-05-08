@@ -1,7 +1,7 @@
 server:
   port: 12323
   address:
-    - 127.0.0.1
+    - 192.168.31.150
     - localhost
   open-ports:
     - 8084
@@ -13,3 +13,15 @@ server:
     - name: ${server.serverName}-docker2
       ip-address: 192.168.31.102
     - { name: docker3, ipAddress: 192.168.31.103 }
+management:
+  endpoint:
+    health:
+      show-details: never
+  endpoints:
+    web:
+      exposure:
+        exclude:
+
+info:
+  name: ${server.serverName} Server
+  address: ${server.address[0]}

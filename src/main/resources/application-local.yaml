@@ -23,3 +23,19 @@ server:
     - { name: docker3, ipAddress: 192.168.31.103 }
 #   此处也可以配置为这种one-line形式，但是在实际测试中发现$符号无法被识别，报错
 #   - {name: ${server.serverName}-docker3, ipAddress: 192.168.31.103}
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  info:
+    env:
+      enabled: true
+    os:
+      enabled: true
+info:
+  name: ${server.serverName} Server
+  address: ${server.address[0]}

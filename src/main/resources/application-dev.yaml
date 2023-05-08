@@ -13,3 +13,14 @@ server:
     - name: ${server.serverName}-docker2
       ip-address: 192.168.31.102
     - { name: docker3, ipAddress: 192.168.31.103 }
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+info:
+  name: ${server.serverName} Server
+  address: ${server.address[0]}

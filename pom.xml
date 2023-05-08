@@ -86,9 +86,15 @@
             <artifactId>redis-springboot-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+        <!--Jedis坐标-->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
+        </dependency>
+        <!--SpringBoot监控模块-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
     </dependencies>
 

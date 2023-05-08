@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("/Hello")
 public class HelloController {
 
     @Value("${server.serverName}")
@@ -48,4 +49,10 @@ public class HelloController {
             System.out.println(s);
         }
     }
+
+    @RequestMapping("/user")
+    public String findAll(){
+        return "success";
+    }
+
 }
