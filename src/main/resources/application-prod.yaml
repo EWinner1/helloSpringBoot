@@ -21,7 +21,6 @@ management:
     web:
       exposure:
         exclude:
-
 info:
   name: ${server.serverName} Server
   address: ${server.address[0]}

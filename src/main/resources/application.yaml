@@ -11,6 +11,12 @@ spring:
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     type: com.microsoft.sqlserver.jdbc.SQLServerDataSource
     url: jdbc:sqlserver://localhost:1433;integratedSecurity=true;trustServerCertificate=true;encrypt=true;Database=MyTestData
+  boot:
+    admin:
+      client:
+        url: http://localhost:12320/route
+        instance:
+          service-host-type: ip
 server:
   servlet:
     context-path: /route
